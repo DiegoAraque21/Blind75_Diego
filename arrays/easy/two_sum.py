@@ -38,7 +38,7 @@ class Solution(object):
                 result.append(map_nums[subsNum])
                 result.append(i)
                 return result
-            # if the substracted value is not in the map, add the urrent value to the map
+            # if the substracted value is not in the map, add the current value to the map
             map_nums[nums[i]] = i
 
         return result
