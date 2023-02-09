@@ -23,7 +23,12 @@ class Solution:
         # join all the words. Putting the
         # size of the word and a semicolon as separators at
         # the beginning
-        return "".join(f'{len(str)};{str}' for str in strs)
+        encoded_arr = []
+        for str in strs:
+            word = f'{len(str)};{str}'
+            encoded_arr.append(word)
+
+        return "".join(encoded_arr)
 
     """
     @param: str: A string
