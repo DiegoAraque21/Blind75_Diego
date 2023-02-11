@@ -16,9 +16,9 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 
 # Definition for singly-linked list.
 class ListNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 class Solution(object):
     def hasCycle(self, head):
