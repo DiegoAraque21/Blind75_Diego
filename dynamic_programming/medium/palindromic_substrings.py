@@ -23,7 +23,7 @@ class Solution(object):
 
         num_palindromes = 0
 
-        # itereta once through the string
+        # iterate once through the string
         for i in range(len(s)):
             # odd: pointers start in the same position, and expand
             l, r = i, i

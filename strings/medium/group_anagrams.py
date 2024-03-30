@@ -31,6 +31,26 @@ class Solution(object):
 
         # return each one of the anagrams grouped
         return grouped_anagrams.values()
+    
+class Solution2(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+
+        # minor optimization since complexity is now 0(m*n) instead of O(m*n*logn)
+        
+        result = defaultdict(list)
+
+        for word in strs:
+            count = [0] * 26
+            for l in word:
+                count[ord(l) - ord("a")] += 1
+            
+            result[tuple(count)].append(word)
+        
+        return result.values()
 
 
 print(Solution.groupAnagrams(Solution, [""]))

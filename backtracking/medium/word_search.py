@@ -8,7 +8,7 @@ class Solution(object):
             word[i] != board[row][column] or 
             (row, column) in path):
             return False
-        print(row, column, word, board[row][column], word[i])
+
         path.add((row, column))
         res = (self.dfs(row+1, column, i+1, word, board, path) or
                self.dfs(row - 1, column, i+1, word, board, path) or
